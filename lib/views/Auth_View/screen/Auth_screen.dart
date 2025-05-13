@@ -1,10 +1,12 @@
 
+import 'package:Film_Finder/views/Auth_View/screen/auth_login_screen.dart';
+import 'package:Film_Finder/views/Auth_View/screen/auth_signup_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:Film_Finder/views/Nav_screen.dart';
 
-class Film_Finder extends StatelessWidget {
-  const Film_Finder ({super.key});
+
+class FilmFinder extends StatelessWidget {
+  const FilmFinder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +82,9 @@ class Film_Finder extends StatelessWidget {
 
 
                     ElevatedButton.icon(
-                    onPressed: (){}, 
+                    onPressed: (){
+                     Navigator.push(context, MaterialPageRoute(builder: (context) =>AuthSignUpScreen()));
+                    }, 
                     label: Text("Sign with Email"),
                     ),
 
@@ -108,7 +112,7 @@ class Film_Finder extends StatelessWidget {
 
                     TextButton(
                       onPressed: (){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NavScreen()));
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>AuthLoginScreen()));
                       }, 
                       child: Text("Log in ")),
                       SizedBox( height: 5)

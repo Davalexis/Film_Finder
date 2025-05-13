@@ -1,6 +1,7 @@
+import 'package:Film_Finder/views/Home_views/widget/pageview_widget.dart';
+import 'package:Film_Finder/views/Home_views/widget/topbar_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:Film_Finder/views/Home_views/home_veiw_widgets/pageview_widget.dart';
-import 'package:Film_Finder/views/Home_views/home_veiw_widgets/topbar_widget.dart';
+
 
 
 class HomeScreen extends StatefulWidget {

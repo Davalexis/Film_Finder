@@ -37,6 +37,13 @@ dependencies:
   google_fonts: ^6.2.1
   font_awesome_flutter: ^10.8.0
   iconsax_plus: ^1.0.0
+  shared_preferences: ^2.5.3
+  firebase_core: ^2.17.0
+  firebase_auth: ^4.0.0
+  google_sign_in: ^6.2.1
+  flutter_riverpod: ^2.6.1
+
+  
 
 dev_dependencies:
   flutter_test:

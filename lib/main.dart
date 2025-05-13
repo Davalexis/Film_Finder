@@ -1,9 +1,16 @@
+import 'package:Film_Finder/views/Auth_View/screen/auth_login_screen.dart';
+import 'package:Film_Finder/views/Navigation_bar_view/screen/Nav_screen.dart';
+import 'package:Film_Finder/views/Onboarding_view/screen/onboarding_screen.dart';
+import 'package:Film_Finder/views/Splash_view/screen/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:Film_Finder/views/Auth_View/Testscreen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,52 +20,57 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Test App',
-      theme: ThemeData(
-      useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 157, 157, 157).withOpacity(0.9)),
-      textTheme: GoogleFonts.inriaSansTextTheme(),
-      
-      elevatedButtonTheme: ElevatedButtonThemeData(
-         style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white, // Text color
-            backgroundColor: const Color.fromARGB(255, 10, 20, 24), // Button background
-            minimumSize: const Size(double.infinity, 50),
-             // Full width, fixed height
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25.0),
-              side: BorderSide(
-                color: Colors.black,
-                strokeAlign: BorderSide.strokeAlignCenter,
-                style: BorderStyle.solid,
-              )  
-            ),
-            textStyle: const TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.bold,
-            ),
+        debugShowCheckedModeBanner: false,
+        title: 'FilmFinder',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+              seedColor:
+                  const Color.fromARGB(255, 157, 157, 157).withOpacity(0.9)),
+          textTheme: GoogleFonts.inriaSansTextTheme(),
 
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white, // Text color
+              backgroundColor:
+                  const Color.fromARGB(255, 10, 20, 24), // Button background
+              minimumSize: const Size(double.infinity, 50),
+              // Full width, fixed height
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25.0),
+                  side: BorderSide(
+                    color: Colors.black,
+                    strokeAlign: BorderSide.strokeAlignCenter,
+                    style: BorderStyle.solid,
+                  )),
+              textStyle: const TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
           
-          ),
-        ),
-        textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-            foregroundColor: Colors.white, // Text color for Log in
-            textStyle: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
+          textButtonTheme: TextButtonThemeData(
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white, // Text color for Log in
+              textStyle: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
+
+          //SCAFFOLD BACKGROUNG COLOR
+          scaffoldBackgroundColor:
+              Color.fromARGB(255, 157, 157, 157).withOpacity(0.9),
         ),
 
-        //SCAFFOLD BACKGROUNG COLOR
-        scaffoldBackgroundColor: Color.fromARGB(255, 157, 157, 157).withOpacity(0.9) ,
-      ),
-        
-      
-  
-      home: Film_Finder()
-    );
-     }
-    }
+        routes: {
+          '/splash': (context) => const SplashScreen(),
+          '/onboarding': (context) => const OnboardingScreen(),
+          '/login': (context) => const AuthLoginScreen(),
+          '/home': (context) => const NavScreen(),
+        },        
+        home: const SplashScreen());
+  }
+}

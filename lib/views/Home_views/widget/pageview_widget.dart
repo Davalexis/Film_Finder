@@ -1,6 +1,7 @@
+import 'package:Film_Finder/views/Home_views/widget/moviecontent_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:Film_Finder/Data/movie_data.dart';
-import 'package:Film_Finder/views/Home_views/home_veiw_widgets/moviecontent_widget.dart';
+
 
 class PageviewWidget extends StatelessWidget {
 

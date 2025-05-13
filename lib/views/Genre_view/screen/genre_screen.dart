@@ -1,8 +1,8 @@
+import 'package:Film_Finder/views/Genre_view/widget/genre_grid_view.dart';
+import 'package:Film_Finder/views/Genre_view/widget/genre_tabbar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:Film_Finder/Data/movie_data.dart';
 import 'package:Film_Finder/constants/constants_files.dart';
-import 'package:Film_Finder/views/Genre_view/genre_grid_view.dart';
-import 'package:Film_Finder/views/Genre_view/genre_tabbar_widget.dart';
 
 
 
