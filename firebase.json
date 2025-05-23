@@ -1,0 +1,23 @@
+{
+    "extensions": {},
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "film-finder-dc167",
+                    "appId": "1:514523111730:android:4b72d07cb1537e5460f72b",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "film-finder-dc167",
+                    "configurations": {
+                        "android": "1:514523111730:android:4b72d07cb1537e5460f72b",
+                        "ios": "1:514523111730:ios:7d861a3bc13244d260f72b"
+                    }
+                }
+            }
+        }
+    }
+}

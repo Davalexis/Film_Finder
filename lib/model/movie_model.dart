@@ -1,15 +1,24 @@
-class MovieModel {
-
+class Movie {
+  final int id ;
   final String title;
-  final String image_url;
-  final String duration;
-  final String year;
-  final String genre;
+  final String overview;
+  final String posterPath; 
 
-  MovieModel({
-    required this.title, 
-    required this.image_url, 
-    required this.duration, 
-    required this.year, 
-    required this.genre});
+  Movie({
+    required this.id,
+    required this.title,
+    required this.overview,
+    required this.posterPath,
+  });
+
+  factory Movie.fromJson(Map<String, dynamic> json) {
+    return Movie(
+      id: json['id'],
+      title: json['title'],
+      overview: json['overview'],
+      posterPath: json['poster_path'],
+    );
+  }
+
+  String get fullPosterUrl => 'https://image.tmdb.org/t/p/w500$posterPath';
 }

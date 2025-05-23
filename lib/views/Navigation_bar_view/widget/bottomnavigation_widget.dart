@@ -39,8 +39,8 @@ class BottomnavigationWidget extends StatelessWidget {
 
                 
                _buildNavItem(
-                icon: IconsaxPlusLinear.note_2, 
-                label: "Genres", 
+                icon: IconsaxPlusLinear.search_normal, 
+                label: "Search", 
                 onTap: (){onItemTaped(1);}, 
                 isSelected: selectedIndex == 1),
                 
@@ -51,8 +51,8 @@ class BottomnavigationWidget extends StatelessWidget {
                 isSelected: selectedIndex == 2),
 
                 _buildNavItem(
-                icon: IconsaxPlusLinear.arrow_down_1 , 
-                label: "Downloads", 
+                icon: IconsaxPlusLinear.profile , 
+                label: "Me", 
                 onTap: (){onItemTaped(3);}, 
                 isSelected: selectedIndex == 3),
 

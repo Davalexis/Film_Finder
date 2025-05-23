@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "514523111730",
+    "project_id": "film-finder-dc167",
+    "storage_bucket": "film-finder-dc167.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514523111730:android:4b72d07cb1537e5460f72b",
+        "android_client_info": {
+          "package_name": "com.example.test_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514523111730-ht6trhen5r3osnt9tvqi4mgnso2f3pt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABhOFEI4fFEOQcOITl8zU2Kxdf6gaTmSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514523111730-ht6trhen5r3osnt9tvqi4mgnso2f3pt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

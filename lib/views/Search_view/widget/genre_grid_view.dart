@@ -4,10 +4,10 @@ import 'package:Film_Finder/model/movie_model.dart';
 
 class GridViewWidget extends StatelessWidget {
 
-   final List<MovieModel> movies;
+   final List<Movie> moviesModel;
 
 
-   GridViewWidget({super.key , required this.movies});
+   const GridViewWidget({super.key , required this.moviesModel});
 
 
   @override
@@ -22,12 +22,12 @@ class GridViewWidget extends StatelessWidget {
           mainAxisSpacing: 20 ,     
           ),
           
-        itemCount: movies.length,
+        itemCount: moviesModel.length,
         itemBuilder: (BuildContext context, int index) {
-           final movie = movies[index];
+           final movie = moviesModel[index];
           return ClipRRect(
             borderRadius: BorderRadius.circular(20),
-                child: Image.asset(movie.image_url,
+                child: Image.asset(movie.fullPosterUrl,
              fit: BoxFit.cover,
             ),
           ) ;

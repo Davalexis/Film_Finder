@@ -1,7 +1,6 @@
-import 'package:Film_Finder/views/Auth_View/screen/auth_login_screen.dart';
-import 'package:Film_Finder/views/Navigation_bar_view/screen/Nav_screen.dart';
-import 'package:Film_Finder/views/Onboarding_view/screen/onboarding_screen.dart';
-import 'package:Film_Finder/views/Splash_view/screen/splash_screen.dart';
+import 'package:Film_Finder/firebase_options.dart';
+import 'package:Film_Finder/views/Auth_View/screen/auth_checker_screen.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,7 +8,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const ProviderScope(child: MyApp()));
 }
 
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
-          
+
           textButtonTheme: TextButtonThemeData(
             style: TextButton.styleFrom(
               foregroundColor: Colors.white, // Text color for Log in
@@ -65,12 +66,7 @@ class MyApp extends StatelessWidget {
               Color.fromARGB(255, 157, 157, 157).withOpacity(0.9),
         ),
 
-        routes: {
-          '/splash': (context) => const SplashScreen(),
-          '/onboarding': (context) => const OnboardingScreen(),
-          '/login': (context) => const AuthLoginScreen(),
-          '/home': (context) => const NavScreen(),
-        },        
-        home: const SplashScreen());
+  
+        home: AuthCheckerScreen());
   }
 }
