@@ -2,7 +2,7 @@ import 'package:Film_Finder/controller/SignIn_with_google.dart';
 import 'package:Film_Finder/controller/auth_Signup_controller.dart';
 import 'package:Film_Finder/views/Home_views/screen/home_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Film_Finder/constants/constants_files.dart';
+import 'package:Film_Finder/core/constants/constants_files.dart';
 import 'package:Film_Finder/views/Auth_View/screen/auth_login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

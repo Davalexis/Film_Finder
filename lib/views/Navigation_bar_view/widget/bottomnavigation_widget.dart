@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Film_Finder/constants/constants_files.dart';
+import 'package:Film_Finder/core/constants/constants_files.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
 class BottomnavigationWidget extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:Film_Finder/constants/constants_files.dart';
+import 'package:Film_Finder/core/constants/constants_files.dart';
 import 'package:Film_Finder/views/Auth_View/screen/auth_login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';

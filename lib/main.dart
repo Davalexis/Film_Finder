@@ -65,8 +65,6 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor:
               Color.fromARGB(255, 157, 157, 157).withOpacity(0.9),
         ),
-
-  
         home: AuthCheckerScreen());
   }
 }
