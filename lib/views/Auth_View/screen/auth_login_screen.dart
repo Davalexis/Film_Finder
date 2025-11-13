@@ -5,8 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:Film_Finder/core/constants/constants_files.dart';
 import 'package:Film_Finder/views/Auth_View/screen/auth_signup_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AuthLoginScreen extends ConsumerStatefulWidget {
   const AuthLoginScreen({super.key});
@@ -28,7 +28,9 @@ class _AuthLoginScreenState extends ConsumerState<AuthLoginScreen> {
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
-         Container(
+
+           //------------> BACKGROUND AND GRADIENT  <---------------
+        Container(
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/Image/image2.jpg'),
@@ -52,8 +54,7 @@ class _AuthLoginScreenState extends ConsumerState<AuthLoginScreen> {
           ),
         ),
 
-
-
+        //------------> SIGN UP FORM <---------------
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
           child: Form(
@@ -73,8 +74,9 @@ class _AuthLoginScreenState extends ConsumerState<AuthLoginScreen> {
                 TextFormField(
                   controller: emailController,
                   validator: (value) {
-                    return  value == null || value.isEmpty ? 'Enter Email' : null;
-                     
+                    return value == null || value.isEmpty
+                        ? 'Enter Email'
+                        : null;
                   },
                   style: TextStyle(
                       fontSize: 17,
@@ -100,8 +102,9 @@ class _AuthLoginScreenState extends ConsumerState<AuthLoginScreen> {
                 TextFormField(
                   controller: passwordController,
                   validator: (value) {
-                    return  value == null || value.isEmpty ? 'Enter password' : null;
-                    
+                    return value == null || value.isEmpty
+                        ? 'Enter password'
+                        : null;
                   },
                   style: TextStyle(
                       fontSize: 17,
@@ -124,6 +127,7 @@ class _AuthLoginScreenState extends ConsumerState<AuthLoginScreen> {
                   obscureText: true,
                 ),
                 SizedBox(height: 5),
+
                 Row(
                   children: [
                     Text(
@@ -147,13 +151,15 @@ class _AuthLoginScreenState extends ConsumerState<AuthLoginScreen> {
                   ],
                 ),
                 SizedBox(height: 15),
+
+                //------------> GOOGLE AND APPLE SIGN IN  <---------------
                 Padding(
                   padding: const EdgeInsets.only(left: 90),
                   child: Row(
                     spacing: 30,
                     children: [
                       GestureDetector(
-                        onTap:  () async {
+                        onTap: () async {
                           final userCredential =
                               await signInWithGoogle(context);
                           if (userCredential != null) {
@@ -193,21 +199,10 @@ class _AuthLoginScreenState extends ConsumerState<AuthLoginScreen> {
                   ),
                 ),
                 SizedBox(height: 30),
+
+                //------------> SIGN UP BUTTON  <---------------
                 ElevatedButton(
-                  onPressed: () {
-                    // if (formKey.currentState!.validate()) {
-                    //  ref.read(AuthLoginControllerProvider.notifier).login(
-                    //       email: emailController.text,
-                    //       password: passwordController.text,
-                    //     );
-                    //   if (authState.isLoading == false) {
-                    //     Navigator.pushReplacement(
-                    //         context,
-                    //         MaterialPageRoute(
-                    //             builder: (_) => NavScreen()));
-                    //   }
-                    // }
-                  },
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromRGBO(15, 25, 30, 1),
                     shape: RoundedRectangleBorder(
